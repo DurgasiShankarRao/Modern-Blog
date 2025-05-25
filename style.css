@@ -192,7 +192,7 @@ body.dark-mode footer {
 }
 .newsletter {
   text-align: center;
-  background: #eaf4fc;
+  background: #a4ccec;
   padding: 50px 20px;
 }
 .newsletter-form {
@@ -214,4 +214,22 @@ body.dark-mode footer {
 }
 .newsletter-form button:hover {
   background: #0f75bd;
+}
+/* Hero text color */
+body.dark-mode .hero-text h2,
+body.dark-mode .hero-text p {
+  color: white;
+}
+
+/* Blog post content color */
+body.dark-mode .post-card h3,
+body.dark-mode .post-card p {
+  color: white;
+}
+
+/* Newsletter text color */
+body.dark-mode .newsletter,
+body.dark-mode .newsletter h2,
+body.dark-mode .newsletter p {
+  color: white;
 }
