@@ -1,0 +1,217 @@
+/* style.css */
+* {
+    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.navbar {
+  background: #2193df;
+  height: 100px;
+  color: #222;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.navbar nav a:hover {
+  color: #3284dd;
+}
+
+.hero {
+  background: url("https://source.unsplash.com/1600x600/?blog,nature") no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+}
+.hero-text h2 {
+  font-size: 6em;
+  font-family: 'Times New Roman', Times, serif;
+}
+.hero-text p {
+  font-size: 1.4em; 
+}
+
+section {
+  padding: 60px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.posts .post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.post-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.post-card img {
+  width: 100%;
+}
+.post-card h3 {
+  margin: 15px;
+}
+.post-card p {
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+.contact {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+.social-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 0;
+}
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background: #333;
+  color: #eee;
+}
+
+body.dark-mode a {
+  color: #89c9ff;
+}
+
+body.dark-mode .post-card {
+  background: #222;
+  color: #ddd;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .contact {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #eee;
+}
+
+@media (max-width: 600px) {
+  .hero-text h2 {
+    font-size: 3em;
+  }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  .navbar nav a {
+    margin: 10px 0;
+  }
+  .post-card, .gallery-grid img {
+    border-radius: 5px;
+  }
+}
+.newsletter {
+  text-align: center;
+  background: #eaf4fc;
+  padding: 50px 20px;
+}
+.newsletter-form {
+  margin-top: 15px;
+}
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 250px;
+  border-radius: 5px 0 0 5px;
+}
+.newsletter-form button {
+  padding: 10px 20px;
+  background: #2193df;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.newsletter-form button:hover {
+  background: #0f75bd;
+}
